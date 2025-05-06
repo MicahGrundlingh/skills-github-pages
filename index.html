@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <h1>Aim Trainer</h1>
+        <p>Click anywhere to start</p>
+        <p>Controls:</p>
+        <ul>
+            <li>Mouse to aim</li>
+            <li>Click to shoot</li>
+            <li>↑/↓ arrows to adjust sensitivity</li>
+        </ul>
+    </div>
+
+    <div id="game-container">
+        <div id="score">Score: <span id="scoreValue">0</span></div>
+        <div class="crosshair"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

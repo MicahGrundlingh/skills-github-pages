@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.crosshair::before,
+.crosshair::after {
+    content: '';
+    position: absolute;
+    background: white;
+}
+
+.crosshair::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.crosshair::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+#loading-screen.hidden {
+    display: none;
+}
+
+#loading-screen h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#loading-screen p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#loading-screen ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#loading-screen li {
+    margin: 10px 0;
+    font-size: 18px;
+}
